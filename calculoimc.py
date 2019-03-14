@@ -29,24 +29,25 @@ listaobes2 = [3500,3501,3502,3503,3504,3505,3506,3507,3508,3509,3510,3511,3512,3
 if calculofinaltt in listaabaixo:
     print("Voce esta abaixo do peso!")
     print("")
-    print("Seu resultado do IMC : %a"%(calculofinal2))
+    print("Seu resultado do IMC : %s"%(calculofinal2))
 elif calculofinaltt in listanormal:
     print("Seu peso esta normal!")
     print("")
-    print("Seu resultado do IMC : %a"%(calculofinal2))
+    print("Seu resultado do IMC : %s"%(calculofinal2))
 elif calculofinaltt in listaexcesso:
     print("Voce esta em excesso de peso!")
     print("")
-    print("Seu resultado do IMC : %a"%(calculofinal2))
+    print("Seu resultado do IMC : %s"%(calculofinal2))
 elif calculofinaltt in listaobes1:
     print("Voce apresenta primeiro grau de obesidade!")
     print("")
-    print("Seu resultado do IMC : %a"%(calculofinal2))
+    print("Seu resultado do IMC : %s"%(calculofinal2))
 elif calculofinaltt in listaobes2:
     print("Voce apresenta segundo grau de obesidade!")
     print("")
-    print("Seu resultado do IMC : %a"%(calculofinal2))
+    print("Seu resultado do IMC : %s"%(calculofinal2))
 elif calculofinaltt >= 4000:
     print("Voce apresenta terceiro grau de obesidade, o estado mais grave existente")
     print("")
-    print("Seu resultado do IMC : %a"%(calculofinal2))
+    print("Seu resultado do IMC : %s"%(calculofinal2))
+#Create by BrDimitrius
