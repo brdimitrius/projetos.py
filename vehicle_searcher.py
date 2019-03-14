@@ -19,9 +19,8 @@ elif lang != "pt_BR":
 if langbr == True:
     try:
         req = requests.get("https://www.icarros.com.br/"+marca+"/"+modelo)
-        regex_nomes = re.findall("\w+ %s \w+ \w*" %(modelo),req.text)
         regex_preço = (re.findall("R\$ [0-9.]{1,10}",req.text))
-        carro_nome = regex_nomes[0]
+        carro_nome = (marca + " " + modelo)
         carro_preço = regex_preço[0]
         preço = print("O carro %a foi encontrado no preço de %a"%(carro_nome,carro_preço))
     except:
@@ -30,9 +29,8 @@ if langbr == True:
 elif langbr == False:
     try:
         req = requests.get("https://www.icarros.com.br/"+marca+"/"+modelo)
-        regex_nomes = re.findall("\w+ %s \w+ \w*" %(modelo),req.text)
         regex_preço = (re.findall("R\$ [0-9.]{1,10}",req.text))
-        carro_nome = regex_nomes[0]
+        carro_nome = (marca + " " + modelo)
         carro_preço = regex_preço[0]
         car_price1 = carro_preço.replace(".", "")
         car_price2 = car_price1.replace("R", "")
@@ -43,6 +41,7 @@ elif langbr == False:
         calc2 = calc11.replace(".0", "")
         calc22 = calc2.replace("5", "5.")
         calc = calc22
-        preço = print("The %a was found for the price of %a"%(carro_nome,calc))
+        preço = print("The %a was found for the price of %a ( Based on BRL )"%(carro_nome,calc))
     except:
         print("Something went wrong, contact the developer")
+
