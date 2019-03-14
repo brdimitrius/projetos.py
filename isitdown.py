@@ -52,6 +52,7 @@ elif lang == "pt_BR":
         requestt = requests.get(site)
         status = requestt.status_code
         if status == 404:
+            print("\n Aguarde um momento...\n")
             time.sleep(2)
             print("O site caiu :(")
             time.sleep(2)
@@ -63,6 +64,7 @@ elif lang == "pt_BR":
             elif pergdel == "n":
                 sys.exit()
         elif status == 200:
+            print("\n Aguarde um momento...\n")
             time.sleep(2)
             print("O site esta funcionando corretamente! :)")
             print("")
@@ -75,18 +77,22 @@ elif lang == "pt_BR":
                 print("")
                 print("Ok")
         elif status == 204:
+            print("\n Aguarde um momento...\n")
             time.sleep(2)
             print("Parece que este site esta vazio :O")
             print("")
         elif status == 205:
+            print("\n Aguarde um momento...\n")
             time.sleep(2)
             print("Parece que este site esta vazio :O")
             print("")
         elif status == 306:
+            print("\n Aguarde um momento...\n")
             time.sleep(2)
             print("O Site mudou de proxy")
             print("")
         elif status == 308:
+            print("\n Aguarde um momento...\n")
             time.sleep(2)
             print("O Site mudou de url")
             print("")
@@ -96,5 +102,5 @@ elif lang == "pt_BR":
     except:
         print("Erro, URL invalida")
 
-#Created By: Braian Dimitrius
-#Criado Por Braian Dimitrius
+#Created By: BrDimitrius
+#Criado Por BrDimitrius
