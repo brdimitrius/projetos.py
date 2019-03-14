@@ -10,7 +10,7 @@ class Robot(object):
         self.y = y
     def getplacex(self):
         x_place_str = str(self.x)
-        areax = ("X = %s,"%(x_place_str))
+        areax = ("X = %s"%(x_place_str))
         print(areax)
     def getplacey(self):
         y_place_str = str(self.y)
@@ -25,16 +25,19 @@ class Robot(object):
     def move_down(self, y):
         if self.y <= 10:
             self.y = (down_n)
+            robot1.getplacey()
         else:
             print("Movimento proibido")
     def move_right(self, x):
         if self.x == 5:
             self.x = (self.x + direita_1)
+            robot1.getplacex()
         else:
             print("Movimento proibido")
     def move_left(self, x):
         if self.x <= 10:
             self.x = (esquerda_n)
+            robot1.getplacex()
         else:
             print("Movimento proibido")
 
